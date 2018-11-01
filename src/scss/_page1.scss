@@ -90,6 +90,7 @@
 
 			.aboutme_desc{
 				@include flex(column, nowrap, space-between, flex-start);
+				padding: 0;
 				
 				h1{
 					@include font(2.6em, #5C323B);
@@ -117,8 +118,8 @@
 				}
 			}
 			.aboutme_photo{
-				height: calc(width * 1);
-				min-width: 300px;
+				height: 300px;
+				width: 300px;
 				border-radius: 50%;
 				@include border(4, solid, #371C23);
 				overflow: hidden;
@@ -166,24 +167,25 @@
 							margin-left: 20px;
 						}
 						span{
-							min-height: 40px;
-							min-width: 40px;
+							height: 40px;
+							width: 40px;
 							background-repeat: no-repeat;
 							background-size: cover;
+							background-image: url('../img/advantage_icons.svg');
 						}
 					}
 
 					&:first-child span{
-						background-image: url('../img/dollar_sign.svg');
+						background-position: 0 0;
 					}
 					&:nth-child(2) span{
-						background-image: url('../img/star.svg');
+						background-position: -120px 0;
 					}
 					&:nth-child(3) span{
-						background-image: url('../img/thumbs_up.svg');
+						background-position: -80px 0;
 					}
 					&:last-child span{
-						background-image: url('../img/clock.svg');
+						background-position: -40px 0;
 					}
 
 				}
@@ -215,10 +217,12 @@
 		@media only screen and (max-width: 670px){
 			padding-top: 1.2em;
 		}	
-
-		p{
-			@include font(1em, #9C772A);
-			text-align: center;
+		.footer_wrap{
+			
+			p{
+				@include font(1em, #9C772A);
+				text-align: center;
+			}
 		}
 	}
 }
