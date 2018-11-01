@@ -1,0 +1,224 @@
+.page1_wrap{
+	background: #051F2E;
+	font-family: 'RobotoRegular', sans-serif;
+	
+	.container{
+		height: 100%;
+	}
+
+	header{
+		min-height: 5em;
+		background: #1D1C17;
+		border-bottom: 4px solid #9C772A;
+		
+		.header_wrap{
+			min-height: 5em;
+
+			.nav{
+				@include flex(row, wrap, space-between, center);
+				min-height: 5em;
+				
+				.main_menu{
+					@include flex(row, wrap, flex-start, center);
+
+					li{
+						min-width: 80px;				
+						text-transform: uppercase;
+						height: 30px;
+						padding: 0 10px;
+						text-align: center;
+
+						&:first-child{
+							padding-left: 0;
+							margin-left: -15px;
+						}
+						
+						a{
+							@include font(1em, #9C772A);
+							line-height: 1.6em;
+							white-space: nowrap;
+
+							&:hover{
+								color: #C29434;
+								transition: 200ms;
+							}
+						}
+					}
+				}
+				.social_links{
+					@include flex(row, nowrap, flex-start, center);
+
+					li{
+						margin-left: 5px;
+
+						a{
+							display: block;
+							height: 32px;
+							width: 32px;
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-image: url('../img/social_networks.svg');
+
+							&:hover{
+								opacity: 0.7;
+								transition: 200ms;
+							}
+						}
+						&:first-child a{
+							background-position: 0 0;
+						}
+						&:nth-child(2) a{
+							background-position: -64px 0;
+						}
+						&:nth-child(3) a{
+							background-position: -32px 0;
+						}
+						&:last-child a{
+							background-position: -96px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	main{
+		padding: 60px 0 100px 0;
+
+		.aboutme_wrap{
+			@include flex(row, wrap, space-between, flex-start);
+
+			.aboutme_desc{
+				@include flex(column, nowrap, space-between, flex-start);
+				
+				h1{
+					@include font(2.6em, #5C323B);
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+				p{
+					@include font(1.2em, #9C772A);
+					line-height: 1.2em;
+					margin-bottom: 20px;
+				}
+				a{
+					display: block;
+					height: 2.6em;
+					width: 140px;
+					@include font(1.2em, #5C323B);
+					line-height: 2.1em;
+					@include border(4, solid, #371C23);
+					text-align: center;
+					margin-bottom: 30px;
+
+					&:hover{
+						background: #9C772A; 
+					}
+				}
+			}
+			.aboutme_photo{
+				height: calc(width * 1);
+				min-width: 300px;
+				border-radius: 50%;
+				@include border(4, solid, #371C23);
+				overflow: hidden;
+
+				img{
+					height: 300px;
+					width: 300px;
+				}
+			}
+		}
+
+		.advantages_wrap{
+			@include flex(column, nowrap, space-between, center);
+			margin-top: 30px;
+		
+			.advantages{
+				@include flex(row, wrap, space-between, stretch);
+				
+				.advantage{
+					min-height: 140px;
+					width: 49%;
+					background-color: #371C23;
+					margin-bottom: 20px;
+					box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.55);
+					padding: 10px 10px 20px 30px;
+					@include flex(column, nowrap, flex-start, flex-start);
+					@media only screen and (max-width: 992px){
+						width: 100%;
+					}
+					p{
+						width: 100%;
+						line-height: 1.2em;
+						@include font(1em, #9C772A);
+					}
+					.advantage_title{
+						@include flex(row, nowrap, space-between, center);
+						margin-bottom: 5px;
+
+						h4{
+							height: 50px;
+							line-height: 53px;
+							@include font(1.6em, #9C772A);
+							font-weight: bold;
+							display: inline-block;
+							margin-left: 20px;
+						}
+						span{
+							min-height: 40px;
+							min-width: 40px;
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+					}
+
+					&:first-child span{
+						background-image: url('../img/dollar_sign.svg');
+					}
+					&:nth-child(2) span{
+						background-image: url('../img/star.svg');
+					}
+					&:nth-child(3) span{
+						background-image: url('../img/thumbs_up.svg');
+					}
+					&:last-child span{
+						background-image: url('../img/clock.svg');
+					}
+
+				}
+			}
+			h2{
+				@include font(2.2em, #9C772A);
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				line-height: 50px;
+
+				span{
+					font-size: 2.5em;
+					margin-right: 10px;
+					color: #5C323B;
+				}
+			}
+		}
+	}
+	footer{
+		min-height: 5em;
+		border-top: 4px solid #9C772A;
+		border-bottom: 4px solid #9C772A;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #1D1C17;
+		padding-top: 1.7em;
+		@media only screen and (max-width: 670px){
+			padding-top: 1.2em;
+		}	
+
+		p{
+			@include font(1em, #9C772A);
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "browserify": "^16.2.2",
+    "buffer": "^5.2.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "uglify-js": "^3.4.9",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/viseventasks/task1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/viseventasks/task1#readme"
+}
