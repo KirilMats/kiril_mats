@@ -2,96 +2,10 @@ html{
 	height: 100%;
 }
 body{
-	font-family: 'Times New Roman', Times, serif; 
-	font-size: 16px; 
+	font-family: 'RobotoRegular', sans-serif; 
 	margin: 0;
 	width: 100%;
 	min-height: 100%;
 	position: relative;
-}
-.links_wrap{
-	width: 80vw;
-	margin: 50px auto;
-	display: flex;
-	flex-flow: row nowrap;
-}
-.links_wrap div{
-	border: 2px solid rgb(96,27,127);
-	width: 50%;
-	height: 50px;
-	text-align: center;	
-	font-size: 1.5em;
-	box-sizing: border-box;
-}
-.links_wrap a{
-	color: rgb(104,8,104);
-	display: block;
-	text-decoration: none;
-	height: 100%;
-	width: 100%;
-	line-height: 45px;
-}
-.links_wrap div:not(:first-child){
-	border-left: none;
-}
-.links_wrap div:nth-of-type(odd){
-	background-color: rgb(197,128,228);
-}
-.links_wrap div:nth-of-type(even){
-	background-color: rgb(124,118,238);
-}
-.links_wrap div:hover{
-	animation: rotate 2 200ms forwards;
-}
-
-@keyframes rotate{
-	from{
-		-webkit-transform: rotateZ(0deg);
-			-ms-transform: rotateZ(0deg);
-			transform: rotateZ(0deg);
-	}
-	25%{
-		-webkit-transform: rotateZ(5deg);
-			-ms-transform: rotateZ(5deg);
-			transform: rotateZ(5deg);
-	}
-	50%{
-		-webkit-transform: rotateZ(0deg);
-			-ms-transform: rotateZ(0deg);
-			transform: rotateZ(0deg);
-	}
-	75%{
-		-webkit-transform: rotateZ(-5deg);
-			-ms-transform: rotateZ(-5deg);
-			transform: rotateZ(-5deg)
-	}
-	to{
-		-webkit-transform: rotateZ(0deg);
-			-ms-transform: rotateZ(0deg);
-			transform: rotateZ(0deg);
-	}
-}
-/*Button*/
-.back_to_main{
-	position: absolute;
-	display: block;
-	height: 30px;
-	width: 90px;
-	background-color: #2B6C6F;
-	border: 2px solid #1E4A45;
-	border-radius: 2px;
-	padding: 0;
-}
-.back_to_main:hover{
-	background-color: #1E4A45;
-}
-.back_to_main a{
-	display: block;
-	height: 100%;
-	width: 100%;
-	text-decoration: none;
-	font-size: 1em;
-	line-height: 25px;
-	font-weight: 600;
-	color: #fff;
+	font-size: 16px; 
 }

@@ -1,4 +1,3 @@
-$px: 'px';
 $breakpoints: (
 				lg: 1024, 
 				md: 768,
@@ -166,11 +165,11 @@ $media-direction: max !default;
 	font-size: $font-size;
 }
 @mixin border($size, $type, $color){
-	border: $size#{$px} $type $color;
+	border: $size $type $color;
 }
 @mixin border-rad($size, $type, $color, $radius){
-	border: $size#{$px}, $type, $color;
-	border-radius: $radius#{$px};
+	border: $size $type $color;
+	border-radius: $radius;
 }
 @mixin transition($property, $duration, $timing){
 	-webkit-transition: $property $duration $timing;
@@ -189,3 +188,7 @@ $right-bracket: ')';
 	-o-transform: $function-name#{$left-bracket}$value#{$right-bracket};
 	transform: $function-name#{$left-bracket}$value#{$right-bracket};
 }
+$c1: #04345B;
+$c2: #07568C;
+$c3: #2F85BC;
+$c4: #fff;
