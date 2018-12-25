@@ -1,0 +1,292 @@
+.main_page_wrap{
+	position: relative;
+
+	main{
+		padding: rem(60px) 0 rem(100px) 0;
+		position: relative;
+		background-color: $c4;
+
+		.aboutme_wrap{
+			@include flex(row, wrap, space-between, flex-start);
+
+			.aboutme_desc{
+				@include flex(column, nowrap, space-between, flex-start);
+				padding: 0;
+				
+				h1{
+					@include font(rem(42px), $c2);
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+				p{
+					@include font(rem(19px), $c3);
+					line-height: rem(19px);
+					margin-bottom: rem(20px);
+				}
+				a{
+					display: block;
+					height: rem(42px);
+					width: rem(140px);
+					@include font(rem(19px), $c2);
+					line-height: rem(34px);
+					@include border(rem(4px), solid, $c3);
+					text-align: center;
+					margin-bottom: rem(30px);
+
+					&:hover{
+						background: $c3; 
+					}
+				}
+			}
+			.aboutme_photo{
+				height: rem(300px);
+				width: rem(300px);
+				border-radius: 50%;
+				@include border(rem(4px), solid, $c1);
+				overflow: hidden;
+
+				img{
+					height: rem(300px);
+					width: rem(300px);
+				}
+			}
+		}
+
+		.advantages_wrap{
+			@include flex(column, nowrap, space-between, center);
+			margin-top: rem(30px);
+			
+			.advantages{
+				@include flex(row, wrap, space-between, stretch);
+				
+				.advantage{
+					min-height: rem(140px);
+					width: 49%;
+					background-color: #f9f9f9;
+					margin-bottom: rem(20px);
+					box-shadow: rem(7px 7px 10px rgba(0, 0, 0, 0.55));
+					padding: rem(10px 10px 20px 30px);
+					@include flex(column, nowrap, flex-start, flex-start);
+					@media only screen and (max-width: 992px){
+						width: 100%;
+					}
+					p{
+						width: 100%;
+						line-height: rem(19px);
+						@include font(rem(16px), $c3);
+					}
+					.advantage_title{
+						@include flex(row, nowrap, space-between, center);
+						margin-bottom: rem(5px);
+
+						h4{
+							height: rem(50px);
+							line-height: rem(53px);
+							@include font(rem(26px), $c2);
+							font-weight: bold;
+							display: inline-block;
+							margin-left: rem(20px);
+						}
+						span{
+							height: rem(40px);
+							width: rem(40px);
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-image: url('../img/advantage_icons.svg');
+						}
+					}
+
+					&:first-child span{
+						background-position: 0 0;
+					}
+					&:nth-child(2) span{
+						background-position: rem(-120px 0);
+					}
+					&:nth-child(3) span{
+						background-position: rem(-80px 0);
+					}
+					&:last-child span{
+						background-position: rem(-40px 0);
+					}
+
+				}
+			}
+			h2{
+				@include font(rem(35px), $c3);
+				margin-bottom: rem(20px);
+				text-transform: uppercase;
+				line-height: rem(50px);
+
+				span{
+					font-size: rem(80px);
+					margin-right: rem(10px);
+					color: $c2;
+				}
+			}
+		}
+		.carousel_wrap{
+			
+			.carousel{
+				height: 200px;
+				margin: 50px auto;
+				position: relative;
+				@include flex(row, nowrap, center, center);
+				perspective: 2000px;
+				
+				.carousel_content{
+					width: 100%;
+					position: absolute;
+					top: 0;	
+					transform-style: preserve-3d;
+					animation: rotate 16s infinite linear;
+
+					&:hover{
+						animation-play-state: paused;
+					}
+					figure{
+						position: absolute;
+						width: rem(280px);
+						height: rem(180px);
+						overflow: hidden;
+						transition: 300ms;
+	
+						img{
+							width: 100%;
+							height: 100%;
+						}
+						&:first-child{
+							transform: rotateY(72deg) translateZ(rem(250px));
+
+							&:hover{
+								transform: rotateY(72deg) translateZ(rem(250px)) scale(1.2);
+							}
+						}
+						&:nth-child(2){
+							transform: rotateY(144deg) translateZ(rem(250px));
+
+							&:hover{
+								transform: rotateY(144deg) translateZ(rem(250px)) scale(1.2);
+							}
+						}
+						&:nth-child(3){
+							transform: rotateY(216deg) translateZ(rem(250px));
+
+							&:hover{
+								transform: rotateY(216deg) translateZ(rem(250px)) scale(1.2);
+							}
+						}
+						&:nth-child(4){
+							transform: rotateY(288deg) translateZ(rem(250px));
+							&:hover{
+								transform: rotateY(288deg) translateZ(rem(250px)) scale(1.2);
+							}
+						}
+						&:nth-child(5){
+							transform: rotateY(360deg) translateZ(rem(250px));
+							&:hover{
+								transform: rotateY(360deg) translateZ(rem(250px)) scale(1.2);
+							}
+						}
+					}
+				}
+			}
+			@keyframes rotate{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+				}
+			}
+		}
+
+	}
+}
+#carousel_pop_up{
+	.pop_up{
+		width: rem(900px);
+	    height: rem(500px);
+	    background: $c4;
+	    position: fixed;
+	    top: 50%;
+	   	left: 50%;
+	   	margin-top: rem(-210px);
+	   	margin-left: rem(-450px);
+	    border-radius: 5px;
+	    z-index: 5;
+	    display: none;
+
+		&.open_pop_up{
+			display: block;
+		}
+		&.close_pop_up{
+			display: none;
+		}
+		%close_icon_pop_up{
+			content: '';
+			height: 30px;
+			width: 4px;
+			background-color: $c2;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -2px;
+			margin-top: -15px;
+		}
+		#close_pop_up{
+			cursor: pointer;
+			height: 40px;
+			width: 40px;
+			background: none;
+			border: none;
+			border-radius: 50%;
+			position: absolute;
+			right: 0;
+			margin-right: -40px;
+			top: -40px;
+			transition: 300ms;
+			
+			&:hover{
+				box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+			}
+			&:before{
+				@extend %close_icon_pop_up;
+				transform: rotate(45deg);
+			}
+			&:after{
+				@extend %close_icon_pop_up;
+				transform: rotate(-45deg);
+			}
+		}
+		%slide_block{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 49%;
+			background-color: $c2;
+		}
+		.slide_image{
+			@extend %slide_block;
+			left: 0;
+
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	    .slide_text{
+			@extend %slide_block;
+			right: 0;
+
+			.slide_title{
+				font-size: rem(40px);
+				text-align: center;
+				margin: 10px 0;
+			}
+			.slide_desc{
+				margin: 0 20px 20px;
+			}
+	    }
+	}
+}

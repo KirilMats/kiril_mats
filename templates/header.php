@@ -1,3 +1,30 @@
+<div class="custom_header_wrap">
+<div class="logo_wrap">
+	<div class="logo front"><a href="index.php"></a></div>
+	<div class="logo back"><a href="index.php"></a></div>
+</div>
+<div class="custom_header">
+	<div class="slider">	
+		<img src="dist/img/Header/1.jpg" alt="web development bg">
+		<img src="dist/img/Header/2.jpg" alt="web development bg">
+		<img src="dist/img/Header/3.jpg" alt="web development bg">
+		<img src="dist/img/Header/4.jpg" alt="web development bg">
+		<img src="dist/img/Header/5.jpg" alt="web development bg">
+	</div>
+</div>
+<div class="slider_buttons">
+	<button id="prev"><span><</span></button>
+	<button id="next"><span>></span></button>
+</div>
+<div class="go_to_content">
+<div class="container">
+<div class="row">
+	<a class="arrow" href="#content">
+		<span></span>
+	</a>
+</div>
+</div>
+</div>
 <div class="header_wrap">
 <div class="container">
 <div class="row">
@@ -7,12 +34,11 @@
 	<span class="button button-toggle"></span>
 </label>
 <nav class="main_menu">
-	<a href="page1.php">Main</a></li>
-	<a href="" class="current_page">About me</a>	
-	<a href="">Services&Prices</a>	
-	<a href="">Portfolio</a>	
-	<a href="registration.php">Register</a>	
-	<a href="">Contacts</a>	
+	<a href="index.php" class="current_page">Main</a></li>
+	<a href="mods/aboutme.php">About me</a>	
+	<a href="mods/services&prices.php">Services&Prices</a>	
+	<a href="mods/portfolio.php">Portfolio</a>	
+	<a href="contactme.php">Contact me</a>	
 </nav>
 <ul class="social_links">
 	<li><a href="https://www.instagram.com/kirilmats/">
@@ -58,6 +84,7 @@
 		</svg>
 	</a></li>
 </ul>
+</div>
 </div>
 </div>
 </div>

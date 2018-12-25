@@ -4,54 +4,12 @@
 	<?php require_once "templates/head.php"; ?>
 </head>
 <body>
-	<div class="page_wrap">
+	<div class="main_page_wrap">
 		<?php require_once "templates/preloader.php"; ?>
 		<header>			
-			<div class="custom_header_wrap">
-			<div class="logo_wrap">
-				<div class="logo front"><a href="index.php"></a></div>
-				<div class="logo back"><a href="index.php"></a></div>
-			</div>
-			<div class="custom_header">
-				<div class="slider">	
-					<img src="dist/img/1.jpg" alt="web development bg">
-					<img src="dist/img/2.jpg" alt="web development bg">
-					<img src="dist/img/3.jpg" alt="web development bg">
-					<img src="dist/img/4.jpg" alt="web development bg">
-					<img src="dist/img/5.jpg" alt="web development bg">
-				</div>
-			</div>
-			<div class="slider_buttons">
-				<button id="prev"><span><</span></button>
-				<button id="next"><span>></span></button>
-			</div>
-			<div class="go_to_content">
-			<div class="container">
-			<div class="row">
-				<a class="arrow" href="#content">
-					<span></span>
-				</a>
-			</div>
-			</div>
-			</div>
-				<?php require_once "templates/header.php"; ?>
-			</div>
+			<?php require_once "templates/header.php"; ?>
 		</header>
 		<main>
-			<div class="container" id="content">
-			<div class="row">
-			<div class="col-12 aboutme_wrap">
-			<div class="col-8 aboutme_desc">
-				<h1>About me</h1>
-				<p>My name is Kiril. I am a freelance web designer, web developer. I create effective solutions for your business. I am able to listen and HEAR my clients. I turn complex problems into simple ones, I will help your business to stimulate sales and increase profitability. I create websites that look great, load quickly, are functional and easy to use.</p>
-				<a href="services&prices.html">Service order</a>
-			</div>
-			<div class="aboutme_photo">
-				<img src="dist/img/aboutme_photo.jpg">
-			</div>
-			</div>
-			</div>
-			</div>
 			<div class="container">
 			<div class="row advantages_wrap">
 				<h2 class="col-12"><span>4</span> essential reasons to order site from me</h2>
@@ -67,11 +25,11 @@
 				<div class="row carousel_wrap">
 					<div class="col-2 carousel">
 						<div class="carousel_content">
-							<figure><img src="dist/img/1.jpg" alt="web development bg"></figure>
-							<figure><img src="dist/img/2.jpg" alt="web development bg"></figure>
-							<figure><img src="dist/img/3.jpg" alt="web development bg"></figure>
-							<figure><img src="dist/img/4.jpg" alt="web development bg"></figure>
-							<figure><img src="dist/img/5.jpg" alt="web development bg"></figure>
+							<figure><img src="dist/img/Header/1.jpg" alt="web development bg"></figure>
+							<figure><img src="dist/img/Header/2.jpg" alt="web development bg"></figure>
+							<figure><img src="dist/img/Header/3.jpg" alt="web development bg"></figure>
+							<figure><img src="dist/img/Header/4.jpg" alt="web development bg"></figure>
+							<figure><img src="dist/img/Header/5.jpg" alt="web development bg"></figure>
 						</div>
 					</div>
 				</div>
@@ -82,8 +40,7 @@
 		</footer>
 	</div>
 	<div id="carousel_pop_up">
-    </div>
-		
+    </div>	
 	<script type="text/javascript" src="src/scripts/jquery-2.1.1.min.js" ></script>
 	<script type="text/javascript" src='dist/js/bundle.js'></script>
 </body>

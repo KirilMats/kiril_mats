@@ -1,0 +1,21 @@
+footer{
+	min-height: rem(80px);
+	border-top: rem(4px) solid $c1;
+	border-bottom: rem(4px) solid $c1;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	
+	padding-top: rem(28px);
+	@media only screen and (max-width: 670px){
+		padding-top: rem(19px);
+	}	
+	.footer_wrap{
+		
+		p{
+			@include font(rem(16px), $c1);
+			text-align: center;
+		}
+	}
+}
