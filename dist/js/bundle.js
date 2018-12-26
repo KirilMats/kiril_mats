@@ -85,7 +85,7 @@ var customHeader = function () {
 'use strict';
 
 //Header Slider
-var headerSlider = function () {
+var headerSlider = function headerSlider() {
 	var $images = $('.slider img'),
 	    $next_btn = document.getElementById('next'),
 	    $prev_btn = document.getElementById('prev'),
@@ -116,8 +116,13 @@ var headerSlider = function () {
 
 	$next_btn.addEventListener('click', nextSlide);
 	$prev_btn.addEventListener('click', prevSlide);
+};
+var checkWidthForSlider = function () {
+	var width = $(window).width();
+	if (width >= 991) {
+		headerSlider();
+	}
 }();
-
 // function headerSlider(){
 
 // 	setInterval(nextSlider, 5000);

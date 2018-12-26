@@ -1,8 +1,4 @@
 <div class="custom_header_wrap">
-<div class="logo_wrap">
-	<div class="logo front"><a href="index.php"></a></div>
-	<div class="logo back"><a href="index.php"></a></div>
-</div>
 <div class="custom_header">
 	<div class="slider">	
 		<img src="dist/img/Header/1.jpg" alt="web development bg">
@@ -10,11 +6,19 @@
 		<img src="dist/img/Header/3.jpg" alt="web development bg">
 		<img src="dist/img/Header/4.jpg" alt="web development bg">
 		<img src="dist/img/Header/5.jpg" alt="web development bg">
+		<div class="slider_shadow"></div>
 	</div>
+</div>
+<div class="logo_wrap">
+	<div class="logo front"><a href="index.php"></a></div>
+	<div class="logo back"><a href="index.php"></a></div>
 </div>
 <div class="slider_buttons">
 	<button id="prev"><span><</span></button>
 	<button id="next"><span>></span></button>
+</div>
+<div class="slogan">
+	<h1>KIRIL MATS <i>Professional UX/UI developer</i></h1>
 </div>
 <div class="go_to_content">
 <div class="container">
@@ -34,10 +38,10 @@
 	<span class="button button-toggle"></span>
 </label>
 <nav class="main_menu">
-	<a href="index.php" class="current_page">Main</a></li>
-	<a href="mods/aboutme.php">About me</a>	
-	<a href="mods/services&prices.php">Services&Prices</a>	
-	<a href="mods/portfolio.php">Portfolio</a>	
+	<a href="index.php">Main</a></li>
+	<a href="aboutme.php">About me</a>	
+	<a href="services&prices.php">Services&Prices</a>	
+	<a href="portfolio.php">Portfolio</a>	
 	<a href="contactme.php">Contact me</a>	
 </nav>
 <ul class="social_links">

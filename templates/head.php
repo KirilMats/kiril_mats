@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <title>Kiril Mats</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, , initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Website development" />
 <meta name="keywords" content="page web website site development webdesign" />
 <link rel="shortcut icon" href="/dist/img/favicon.svg" type="image/png">

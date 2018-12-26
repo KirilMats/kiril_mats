@@ -17,3 +17,65 @@ body{
 	z-index: 4;
 	pointer-events: none;
 }
+
+//Current page
+.main_page_wrap{
+	.main_menu{
+		a{
+			&:first-child{
+				text-decoration: overline;
+				text-decoration-color: $c3;
+				color: $c3 !important;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.aboutme_wrap{
+	.main_menu{
+		a{
+			&:nth-child(2){
+				text-decoration: overline;
+				text-decoration-color: $c3;
+				color: $c3 !important;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.services_prices_wrap{
+	.main_menu{
+		a{
+			&:nth-child(3){
+				text-decoration: overline;
+				text-decoration-color: $c3;
+				color: $c3 !important;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.porfolio_wrap{
+	.main_menu{
+		a{
+			&:nth-child(4){
+				text-decoration: overline;
+				text-decoration-color: $c3;
+				color: $c3 !important;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.contactme_wrap{
+	.main_menu{
+		a{
+			&:nth-child(5){
+				text-decoration: overline;
+				text-decoration-color: $c3;
+				color: $c3 !important;
+				font-weight: bolder;
+			}
+		}
+	}
+}

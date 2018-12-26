@@ -4,7 +4,7 @@
 	<?php require_once "templates/head.php"; ?>
 </head>
 <body>
-	<div class="services&prices_wrap">
+	<div class="services_prices_wrap">
 		<?php require_once "templates/preloader.php"; ?>
 		<header>			
 			<?php require_once "templates/header.php"; ?>

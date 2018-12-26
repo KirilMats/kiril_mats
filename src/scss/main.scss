@@ -2,9 +2,12 @@
 @import "node_modules/sass-rem/rem";
 @import "reset";
 @import "bootstrap-grid.css";
-@import "common";
-@import "fonts";
 @import "mixins";
+@import "fonts";
+@import "common";
 @import "preloader";
+@import "bg_strips";
 @import "header";
+@import "footer";
 @import "main_page";
+@import "aboutme"

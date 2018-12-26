@@ -2,130 +2,195 @@
 	position: relative;
 
 	main{
-		padding: rem(60px) 0 rem(100px) 0;
 		position: relative;
 		background-color: $c4;
 
-		.aboutme_wrap{
-			@include flex(row, wrap, space-between, flex-start);
+		.reasons_wrap{
+			background-color: rgba($c1, 0.2);
 
-			.aboutme_desc{
-				@include flex(column, nowrap, space-between, flex-start);
-				padding: 0;
-				
-				h1{
-					@include font(rem(42px), $c2);
-					font-weight: bold;
-					margin-bottom: 20px;
+			.advantages_wrap{
+				@include flex(column, nowrap, space-between, center);
+				padding: rem(60px) 0 rem(100px) 0;
+				@media only screen and (max-width: 992px){
+					padding: 20px 0 40px 0;
 				}
-				p{
-					@include font(rem(19px), $c3);
-					line-height: rem(19px);
+				.advantages{
+					@include flex(row, wrap, center, stretch);
+					padding: 0;
+
+					.advantage{
+						min-height: rem(140px);
+						width: 50%;
+						padding: rem(20px 20px 40px 30px);
+						@include flex(column, nowrap, flex-start, flex-start);
+						@media only screen and (max-width: 992px){
+							width: 90%;
+						}
+
+						p{
+							width: 100%;
+							margin-top: 20px;
+							font-size: 22px;
+							@media only screen and (max-width: 992px){
+								font-size: 18px;
+								margin-top: 5px;
+							}
+						}
+						.advantage_title{
+							width: 100%;
+							margin-bottom: rem(5px);
+							position: relative;
+
+							h4{
+								height: rem(60px);
+								line-height: rem(60px);
+								@include font(rem(40px), $c2);
+								font-weight: bold;
+								text-align: center;
+								width: 100%;
+								@media only screen and (max-width: 992px){
+									text-align: left;
+									font-size: 26px;
+								}
+							}
+							span{
+								position: absolute;
+								right: 0;
+								top: 0;
+								height: rem(60px);
+								width: rem(60px);
+								background-repeat: no-repeat;
+								background-size: cover;
+								background-image: url('../img/Main/advantage_icons.svg');
+							}
+						}
+
+						&:first-child{
+							background-color: rgba(#e1e1e1, 0.6);
+
+							span{
+								background-position: 0 0;
+							}
+							h4, p{
+								color: $c1;
+							}
+						}
+						&:nth-child(2){
+							background-color: rgba(#1f5954, 0.4);
+
+							span{
+								background-position: -130px 0;
+							}
+							h4, p{
+								color: $c4;
+							}
+						}
+						&:nth-child(3){
+							background-color: rgba(#1f5954, 0.6);
+
+						 	span{
+								background-position: -198px 0;
+							}
+							h4, p{
+								color: $c4;
+							}
+						}
+						&:last-child{
+							background-color: rgba(#e1e1e1, 0.4);
+
+							 span{
+								background-position: -65px 0;
+							}
+							h4, p{
+								color: $c1;
+							}
+						}
+					}
+				}
+				h2{
+					@include font(rem(48px), $c5);
 					margin-bottom: rem(20px);
-				}
-				a{
-					display: block;
-					height: rem(42px);
-					width: rem(140px);
-					@include font(rem(19px), $c2);
-					line-height: rem(34px);
-					@include border(rem(4px), solid, $c3);
+					text-transform: uppercase;
+					line-height: rem(50px);
 					text-align: center;
-					margin-bottom: rem(30px);
-
-					&:hover{
-						background: $c3; 
-					}
-				}
-			}
-			.aboutme_photo{
-				height: rem(300px);
-				width: rem(300px);
-				border-radius: 50%;
-				@include border(rem(4px), solid, $c1);
-				overflow: hidden;
-
-				img{
-					height: rem(300px);
-					width: rem(300px);
-				}
-			}
-		}
-
-		.advantages_wrap{
-			@include flex(column, nowrap, space-between, center);
-			margin-top: rem(30px);
-			
-			.advantages{
-				@include flex(row, wrap, space-between, stretch);
-				
-				.advantage{
-					min-height: rem(140px);
-					width: 49%;
-					background-color: #f9f9f9;
-					margin-bottom: rem(20px);
-					box-shadow: rem(7px 7px 10px rgba(0, 0, 0, 0.55));
-					padding: rem(10px 10px 20px 30px);
-					@include flex(column, nowrap, flex-start, flex-start);
 					@media only screen and (max-width: 992px){
-						width: 100%;
+						font-size: 24px;
+						line-height: 26px;
 					}
-					p{
-						width: 100%;
-						line-height: rem(19px);
-						@include font(rem(16px), $c3);
-					}
-					.advantage_title{
-						@include flex(row, nowrap, space-between, center);
-						margin-bottom: rem(5px);
-
-						h4{
-							height: rem(50px);
-							line-height: rem(53px);
-							@include font(rem(26px), $c2);
-							font-weight: bold;
-							display: inline-block;
-							margin-left: rem(20px);
-						}
-						span{
-							height: rem(40px);
-							width: rem(40px);
-							background-repeat: no-repeat;
-							background-size: cover;
-							background-image: url('../img/advantage_icons.svg');
+					span{
+						font-size: rem(90px);
+						margin-right: rem(10px);
+						color: $c1;
+						@media only screen and (max-width: 992px){
+							font-size: 60px;
 						}
 					}
-
-					&:first-child span{
-						background-position: 0 0;
-					}
-					&:nth-child(2) span{
-						background-position: rem(-120px 0);
-					}
-					&:nth-child(3) span{
-						background-position: rem(-80px 0);
-					}
-					&:last-child span{
-						background-position: rem(-40px 0);
-					}
-
 				}
-			}
-			h2{
-				@include font(rem(35px), $c3);
-				margin-bottom: rem(20px);
-				text-transform: uppercase;
-				line-height: rem(50px);
-
-				span{
-					font-size: rem(80px);
-					margin-right: rem(10px);
-					color: $c2;
+				.quick_order{
+					background: none;
+					background-color: $c5;
+					margin-left: auto;
+					margin-top: 20px;
+					@include border(4px, solid, $c4);
+					transition: 300ms;
+					@media only screen and (max-width: 992px){
+						margin-right: 10%;
+					}
+					a{
+						font-size: 30px;
+						font-weight: bold;
+						display: block;
+						padding: 10px;
+						width: 100%;
+						height: 100%;
+						color: $c4;
+					}
+					&:hover{
+						background-color: rgba($c4, 0.05);
+					}
 				}
 			}
 		}
 		.carousel_wrap{
+			position: relative;
+			min-height: 450px;
+			padding-bottom: 300px;
+			background-color: rgba($c6, 0.3); 
 			
+			h2.last_works{
+				width: 100%;
+				display: block;
+				color: $c1;
+				font-size: 48px;
+				padding: 40px 0;
+				text-transform: uppercase;
+				text-align: center;
+			}
+			.see_more_portfolio{
+				background: none;
+				display: block;
+				background-color: $c1;
+				margin: 0 auto 120px;
+				margin-top: 20px;
+				@include border(4px, solid, $c4);
+				transition: 300ms;
+
+				a{
+					font-size: 30px;
+					font-weight: bold;
+					display: block;
+					padding: 10px 30px;
+					width: 100%;
+					height: 100%;
+					color: $c4;
+				}
+				&:hover{
+					background-color: rgba($c4, 0.01);
+					a{
+						color: $c1;
+					}
+				}
+			}
 			.carousel{
 				height: 200px;
 				margin: 50px auto;

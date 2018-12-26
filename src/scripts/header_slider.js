@@ -30,8 +30,13 @@ const headerSlider = function(){
 	
 	$next_btn.addEventListener('click', nextSlide);
 	$prev_btn.addEventListener('click', prevSlide);
+};
+const checkWidthForSlider = function(){
+    let width = $(window).width();
+    if (width >= 991) {
+        headerSlider();
+    }
 }();
-
 // function headerSlider(){
 
 // 	setInterval(nextSlider, 5000);
